@@ -17,7 +17,7 @@ using std::stoi;
 int distance(const int &x1, const int &y1, const int &x2, const int &y2)
 {
 	return sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
-}
+};
 
 int main(int argc, char *argv[])
 {
@@ -46,18 +46,18 @@ int main(int argc, char *argv[])
 	while (getline(ifs, line))
 	{
 		// Parse line and load values into x1,y1,x2 and y2 respectively
-		istringstream line(line);
+		istringstream iss_line(line);
 		string temp;
-		getline(line, temp, ',');
+		getline(iss_line, temp, ',');
 		temp.erase(0, 1);
 		int x1 = stoi(temp);
-		getline(line, temp, ')');
+		getline(iss_line, temp, ')');
 		temp.erase(0, 1);
 		int y1 = stoi(temp);
-		getline(line, temp, ',');
+		getline(iss_line, temp, ',');
 		temp.erase(0, 2);
 		int x2 = stoi(temp);
-		getline(line, temp, ')');
+		getline(iss_line, temp, ')');
 		temp.erase(0, 1);
 		int y2 = stoi(temp);
 
